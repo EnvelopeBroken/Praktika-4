@@ -1,4 +1,4 @@
-def vigenere_cipher(text, key):
+def vigenere(text, key):
     ciphered_text = ''
     key = key * (len(text) // len(key)) + key[:len(text) % len(key)]
     
@@ -16,8 +16,8 @@ def vigenere_cipher(text, key):
     
     return ciphered_text
 
-text = input("Введите текст, который нужно зашифровать: ")
+text = input("Начни писать ")
 key = input("Введите ключ: ")
 
-ciphered_text = vigenere_cipher(text, key)
+ciphered_text = vigenere(text, key)
 print("Зашифрованный текст:", ciphered_text)
