@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Взлом шифра Виженера</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://kpravda.ru/wp-content/uploads/2023/02/pexyrgdhnhy.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-bottom: 8px; 
+        }
+        .button-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-bottom: 8px; 
+        }
+        .button-link:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Взлом шифра Виженера</h1>
+    <form action="/enigmaC" method="post">
+        <label for="user_id">Пользователь:</label>
+        <select name="user_id" id="user_id">
+            {% for user in users %}
+                <option value="{{ user }}">{{ user }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="data_in">Зашифрованный текст:</label>
+        <textarea name="data_in" id="data_in" rows="4" cols="50"></textarea>
+        <br>
+        <label for="keyword">Ключевое слово:</label>
+        <input type="text" name="keyword" id="keyword">
+        <br>
+        <input type="submit" value="Взломать">
+    </form>
+</body>
+</html>
